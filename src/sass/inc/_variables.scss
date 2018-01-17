@@ -1,0 +1,18 @@
+$font-main:							        'Roboto', "Arial", sans-serif !default;
+
+$font-size-base:							16px !default;
+$font-size-extra-large:				        ceil($font-size-base * 2.25) !default;
+$font-size-large:							ceil($font-size-base * 1.25) !default;
+$font-size-small:							ceil($font-size-base * 0.85) !default;
+$font-size-mini:							ceil($font-size-base * 0.675) !default;
+
+$header-height:                             60px;
+$footer-height:                             50px;
+
+$font-weight-thin: 						    100;
+$font-weight-light: 					    300;
+$font-weight-normal: 					    400;
+$font-weight-medium: 					    500;
+$font-weight-bold: 						    700;
+
+$site-min-width:         			        320px !default;

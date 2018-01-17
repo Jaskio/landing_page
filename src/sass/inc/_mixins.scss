@@ -1,0 +1,12 @@
+/* clear margin & padding */
+@mixin clear-margin {
+  margin: 0;
+  padding: 0;
+}
+
+/* vertical alignment */
+@mixin vertical-align($position:'absolute', $y:'-50%') {
+    position: unquote($position);
+    top: 50%;
+    transform: translateY(unquote($y));
+}

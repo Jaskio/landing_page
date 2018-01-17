@@ -1,0 +1,24 @@
+
+//vendor
+@import "vendor/slick";
+@import "vendor/slick-theme";
+
+// inc
+@import "inc/reset";
+@import "inc/typography";
+@import "inc/variables";
+@import "inc/mixins";
+@import "inc/colors";
+
+// Shared
+@import "shared/global";
+@import "shared/animations";
+
+// Components
+@import "components/buttons";
+@import "components/fields";
+
+// Sections
+@import "sections/header";
+@import "sections/content";
+@import "sections/footer";
