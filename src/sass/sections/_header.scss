@@ -1,0 +1,38 @@
+$padding-header: 38px;
+$li-spacing: 28px;
+
+.header {
+    width: 100%;
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+    background: $header-bg;
+    &Logo {
+        padding-left: $padding-header;
+        & img {
+            @include vertical-align('relative', '-50%');
+        }
+    }
+    &Navigation {
+        padding-right: calc(#{$padding-header} - #{$li-spacing});
+        & ul {
+            line-height: $header-height;
+            color: $font-color-white;
+            display: inline-flex;
+            & li {
+                padding: 0 $li-spacing;
+                & a {
+                    color: $font-color-white;
+                }
+                &:nth-child(2) {
+                    & ul {
+                        display: none;
+                        & li {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
