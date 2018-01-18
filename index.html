@@ -7,16 +7,91 @@
         <link href="dist/css/app.css" rel="stylesheet">
     </head>
     <body>
-        <header>
-            
+        <header class="header">
+            <div class="headerLogo">
+                <img src="assets/images/logo-white.svg" alt="Logo">
+            </div>
+            <nav class="headerNavigation">
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <span>Works</span>
+                        <ul>
+                            <li>
+                                <a href="#">Submenu link 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Submenu link 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Submenu link 3</a>
+                            </li>
+                            <li>
+                                <a href="#">Submenu link 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
-        <main>
-            <div class="slider"></div>
-            <div>
-                Test
+        <div id="slider" class="slider"></div>
+        <main class="content">
+            <div class="grid">
+                <div class="gridItem">
+                    <div class="gridItemImage">
+                        <img src="" alt="">
+                    </div>
+                    <div class="gridItemTitle">
+                        <h2>Title</h2>
+                    </div>
+                    <div class="gridItemInfo">
+                        <p>Description</p>
+                    </div>
+                    <div class="gridItemLink">
+                        <a href="">View full article</a>
+                    </div>
+                </div>
+            </div>
+            <div class="loadButton">
+                <button>Load More</button>
+            </div>
+            <div class="contact">
+                <h1>Contact Form</h1>
+                <form class="contactForm">
+                    <div class="contactFormItem">
+                        <label for="name">Contact name</label>
+                        <input type="text" name="name" maxlength="30">
+                    </div>
+                    <div class="contactFormItem">
+                        <label for="email">Email address</label>
+                        <input type="email" name="email" maxlength="30">
+                    </div>
+                    <div class="contactFormItem">
+                        <label>Message</label>
+                        <textarea></textarea>
+                    </div>
+                    <div class="contactFormItem">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
             </div>
         </main>
-        <footer></footer>
+        <footer class="footer">
+            <div class="footerItem">
+                <span>2016 Test Page</span>
+            </div>
+            <div class="footerItem">
+                <span>By Jasmin Bektić</span>
+            </div>
+        </footer>
     
         <script src="libs/jquery-3.2.1.min.js"></script>
         <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
