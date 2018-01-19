@@ -20,16 +20,37 @@ $li-spacing: 28px;
             color: $font-color-white;
             display: inline-flex;
             & li {
-                padding: 0 $li-spacing;
-                & a {
+                z-index: 9;
+                & a,
+                & span {
                     color: $font-color-white;
+                    display: inline-block;
+                    padding: 0 $li-spacing;
+                    &:hover {
+                        background: $header-link-hover;
+                        cursor: url('../../assets/icons/hand_pointer.png'), all-scroll;
+                    }
                 }
                 &:nth-child(2) {
+                    position: relative;
                     & ul {
                         display: none;
+                        background: $submenu-bg;
+                        font-size: $font-size-small;
+                        position: absolute;
+                        right: 0;
+                        padding: 13px 0;
                         & li {
-
+                            line-height: 36px;
+                            & a {
+                                width: 200px;
+                                text-align: right;
+                            }
                         }
+                    }
+                    &:hover ul {
+                        display: block;
+                        
                     }
                 }
             }
