@@ -2,7 +2,7 @@
 slickConfig();
 
 function slickConfig() {
-    $('.slider').slick({
+    $('#slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -10,8 +10,8 @@ function slickConfig() {
         fade: true,
         draggable: false,
         dots: true,
+        dotsClass: 'slick-dots sliderDots',
         arrows: false,
         cssEase: 'linear',
-        // zIndex: -1
     });
 }

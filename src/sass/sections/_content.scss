@@ -6,3 +6,55 @@
 main {
     color: $font-color;
 }
+
+/*
+######################
+    Slider
+######################
+*/
+$slider-image-width: 100%;
+$slider-dots-size: 15px;
+
+.slider {
+    &Item {
+        &Image {
+            &Overlay {
+                width: $slider-image-width;
+                height: 100%;
+                top: 0;
+                left: 0;
+                position: absolute;
+                background: rgba(74,73,74,0.30);
+            }
+            & img {
+                width: $slider-image-width;
+            }
+        }
+        &Title {
+            @include vertical-align();
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            font-family: $font-main-black;
+            font-size: $font-size-extra-large;
+            color: $font-color-white;
+        }
+    }
+    &Dots {
+        bottom: 10px;
+        & li {
+            & button {
+                border-radius: 50%;
+                background: $dots-bg;
+                width: $slider-dots-size;
+                height: $slider-dots-size;
+                &:before {
+                    font-size: 0px;
+                }
+            }
+        }
+        & .slick-active button {
+            background: $dots-active-bg;
+        }
+    }
+}
