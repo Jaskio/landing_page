@@ -2,6 +2,19 @@
     outline: none;
     border: none;
     background: none;
-    cursor: pointer;
     padding: 0;
+    cursor: url('../../assets/icons/hand_pointer.png'), all-scroll;
+}
+
+@mixin dots() {
+    @extend .button;
+    border-radius: 50%;
+    background: $dots-bg;
+    width: $slider-dots-size;
+    height: $slider-dots-size;
+    &:before {
+        font-size: 0px;
+        width: $slider-dots-size;
+        height: $slider-dots-size;
+    }
 }

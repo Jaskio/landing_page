@@ -4,7 +4,8 @@
 ######################
 */
 main {
-    color: $font-color;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 /*
@@ -16,6 +17,9 @@ $slider-image-width: 100%;
 $slider-dots-size: 15px;
 
 .slider {
+    &.slick-slider {
+        margin-bottom: 0;
+    }
     &Item {
         &Image {
             &Overlay {
@@ -41,20 +45,55 @@ $slider-dots-size: 15px;
         }
     }
     &Dots {
-        bottom: 10px;
+        bottom: 17px;
         & li {
+            cursor: auto;
+            margin: 0 4px;
             & button {
-                border-radius: 50%;
-                background: $dots-bg;
-                width: $slider-dots-size;
-                height: $slider-dots-size;
-                &:before {
-                    font-size: 0px;
-                }
+                @include dots();
             }
         }
         & .slick-active button {
             background: $dots-active-bg;
+        }
+    }
+}
+
+/*
+######################
+    Grid
+######################
+*/
+$grid-line-height: 34px;
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    &Item {
+        padding: 28px 10px;
+        &Image {
+            & img {
+                width: 100%;
+            }
+        }
+        &Title {
+            font-size: $font-size-large;
+            font-family: $font-main-bold;
+            color: $font-color-darker;
+            line-height: calc(#{$grid-line-height} + 10px);
+        }
+        &Info {
+            line-height: $grid-line-height;
+            margin: 8px 0;
+        }
+        &Link {
+            & a {
+                color: $link-article;
+                font-family: $font-main-bold;
+                line-height: $grid-line-height;
+                cursor: url('../../assets/icons/hand_pointer.png'), all-scroll;
+            }
         }
     }
 }

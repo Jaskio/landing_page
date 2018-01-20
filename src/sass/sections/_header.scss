@@ -11,6 +11,7 @@ $li-spacing: 28px;
         padding-left: $padding-header;
         & img {
             @include vertical-align('relative', '-50%');
+            cursor: url('../../assets/icons/hand_pointer.png'), all-scroll;
         }
     }
     &Navigation {
