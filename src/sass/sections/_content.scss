@@ -50,7 +50,7 @@ $slider-dots-size: 15px;
             cursor: auto;
             margin: 0 4px;
             & button {
-                @include dots();
+                @include dots;
             }
         }
         & .slick-active button {
@@ -95,5 +95,18 @@ $grid-line-height: 34px;
                 cursor: url('../../assets/icons/hand_pointer.png'), all-scroll;
             }
         }
+    }
+}
+
+/*
+######################
+    Load Button
+######################
+*/
+.loadButton {
+    text-align: center;
+    margin: 49px 0;
+    & button {
+        @include load-articles;
     }
 }

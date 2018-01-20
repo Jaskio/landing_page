@@ -18,3 +18,14 @@
         height: $slider-dots-size;
     }
 }
+
+@mixin load-articles() {
+    @extend .button;
+    background: $load-btn;
+    font-size: $font-size-base;
+    font-family: $font-main-medium;
+    color: $font-color-white;
+    height: 60px;
+    width: 320px;
+    border-radius: 4px;
+}
