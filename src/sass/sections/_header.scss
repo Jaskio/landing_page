@@ -1,8 +1,21 @@
+/*
+######################
+    Header
+######################
+*/
 $padding-header: 38px;
 $li-spacing: 28px;
+$mobile-header-size: 50%;
+$mobile-header-height: 100vh;
+
+.mobile-header-size {
+    position: relative;
+    left: $mobile-header-size;
+    width: $mobile-header-size;
+}
 
 .header {
-    width: 100%;
+    width: 100vw;
     height: $header-height;
     display: flex;
     justify-content: space-between;
@@ -56,4 +69,97 @@ $li-spacing: 28px;
             }
         }
     }
+    &Hamburger {
+        padding-right: $padding-header;
+        display: none;
+        & img {
+            @include vertical-align('relative', '-50%');
+        }
+    }
+    &Mobile {
+        position: fixed;
+        z-index: 12;
+        height: $mobile-header-height;
+        width: 100%;
+        background: rgba($mobile-nav-bg, 0.4);
+        transition: 350ms cubic-bezier(0.68, 0.01, 0.35, 0.97);
+        transition-delay: 150ms;
+        left: 100%;
+        &--active {
+            left: 0;
+        }
+        &Overflow--disable {
+            overflow-y: hidden;
+        }
+        &Track {
+            @extend .mobile-header-size;
+            height: $header-height;
+            background: $header-bg;
+            &Close {
+                @include vertical-align('absolute', '-50%');
+                right: $padding-header;
+                & img {
+                    vertical-align: middle;
+                }
+            }
+        }
+        &Navigation {
+            @extend .mobile-header-size;
+            text-align: center;
+            background: $submenu-bg;
+            height: $mobile-header-height;
+            padding: 40px 0;
+            & ul {
+                font-size: $font-size-medium;
+                & li {
+                    line-height: 70px;
+                    & a,
+                    & span {
+                        color: $font-color-white;
+                        &:focus {
+                            color: $header-link-hover;
+                        }
+                    }
+                    &:nth-child(2) {
+                        & ul {
+                            font-size: $font-size-small;
+                            & li {
+                                line-height: 36px;
+                                & a {
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*
+######################
+    Responsive
+######################
+*/
+@media only screen and (max-width: $site-desktop-width) {
+
+}
+
+@media only screen and (max-width: $site-tablet-width) {
+    .header {
+        position: fixed;
+        z-index: 11;
+        &Navigation {
+            display: none;
+        }
+        &Hamburger {
+            display: block;
+        }
+    }
+}
+
+@media only screen and (max-width: $site-mobile-width) {
+
 }

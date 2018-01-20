@@ -159,3 +159,23 @@ $form-spacing: 63px;
         }
     }
 }
+
+
+/*
+######################
+    Responsive
+######################
+*/
+@media only screen and (max-width: $site-desktop-width) {
+
+}
+
+@media only screen and (max-width: $site-tablet-width) {
+    .slider {
+        padding-top: $header-height;
+    }
+}
+
+@media only screen and (max-width: $site-mobile-width) {
+
+}
