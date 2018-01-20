@@ -4,7 +4,7 @@
 ######################
 */
 main {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -32,6 +32,8 @@ $slider-dots-size: 15px;
             }
             & img {
                 width: $slider-image-width;
+                height: 250px;
+                object-fit: cover;
             }
         }
         &Title {
@@ -75,6 +77,8 @@ $grid-line-height: 34px;
         &Image {
             & img {
                 width: 100%;
+                height: 230px;
+                object-fit: cover;
             }
         }
         &Title {
@@ -105,7 +109,7 @@ $grid-line-height: 34px;
 */
 .loadButton {
     text-align: center;
-    margin: 49px 0;
+    margin: 49px 10px;
     & button {
         @include load-articles;
     }
@@ -120,7 +124,7 @@ $form-spacing: 63px;
 
 .form-item {
     margin: 0 auto;
-    width: 40%;
+    width: 490px;
 }
 
 .contact {
@@ -174,8 +178,77 @@ $form-spacing: 63px;
     .slider {
         padding-top: $header-height;
     }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        &Item {
+            &Image {
+                & img {
+
+                }
+            }
+            &Title {
+                font-size: calc(#{$font-size-large} - 4px);
+            }
+            &Info {
+
+            }
+            &Link {
+                & a {
+                    &:focus {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .loadButton {
+        & button {
+            &:focus {
+                background: $load-btn-focus;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: $site-mobile-width) {
+    .slider {
+        &Item {
+            &Image {
+                & img {
+                    height: 400px;
+                }
+            }
+        }
+    }
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+        &Item {
+            &Image {
+                & img {
+                    height: 200px;
+                }
+            }
+            &Title {
+                font-size: calc(#{$font-size-large} - 8px);
+            }
+            &Info {
 
+            }
+            &Link {
+                & a {
+
+                }
+            }
+        }
+    }
+    .loadButton {
+        & button {
+            width: 100%;
+        }
+    }
+    .form-item {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
 }

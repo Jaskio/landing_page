@@ -6,7 +6,7 @@
 $padding-header: 38px;
 $li-spacing: 28px;
 $mobile-header-size: 50%;
-$mobile-header-height: 100vh;
+$mobile-header-height: 100%;
 
 .mobile-header-size {
     position: relative;
@@ -15,7 +15,7 @@ $mobile-header-height: 100vh;
 }
 
 .header {
-    width: 100vw;
+    width: 100%;
     height: $header-height;
     display: flex;
     justify-content: space-between;
@@ -83,7 +83,7 @@ $mobile-header-height: 100vh;
         width: 100%;
         background: rgba($mobile-nav-bg, 0.4);
         transition: 350ms cubic-bezier(0.68, 0.01, 0.35, 0.97);
-        transition-delay: 150ms;
+        transition-delay: 200ms;
         left: 100%;
         &--active {
             left: 0;
@@ -144,13 +144,20 @@ $mobile-header-height: 100vh;
 ######################
 */
 @media only screen and (max-width: $site-desktop-width) {
-
+    .header {
+        &Mobile {
+            display: none;
+        }
+    }
 }
 
 @media only screen and (max-width: $site-tablet-width) {
     .header {
         position: fixed;
         z-index: 11;
+        &Mobile {
+            display: block;
+        }
         &Navigation {
             display: none;
         }
@@ -161,5 +168,8 @@ $mobile-header-height: 100vh;
 }
 
 @media only screen and (max-width: $site-mobile-width) {
-
+    .mobile-header-size {
+        left: 0;
+        width: 100%;
+    }
 }

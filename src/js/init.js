@@ -5,7 +5,7 @@ function slickConfig() {
     $('#slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 5000,
         fade: true,
         draggable: false,
@@ -13,5 +13,6 @@ function slickConfig() {
         dotsClass: 'slick-dots sliderDots',
         arrows: false,
         cssEase: 'linear',
+        adaptiveHeight: true
     });
 }
