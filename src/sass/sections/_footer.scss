@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background: $footer-bg;
+    color: $font-color-white;
+    font-size: $font-size-mini;
+    height: $footer-height;
+    padding: 0 9px;
+    &Item {
+        align-self: center;
+    }
+}
