@@ -110,3 +110,52 @@ $grid-line-height: 34px;
         @include load-articles;
     }
 }
+
+/*
+######################
+    Contact Form
+######################
+*/
+$form-spacing: 63px;
+
+.form-item {
+    margin: 0 auto;
+    width: 40%;
+}
+
+.contact {
+    background: $form-bg;
+    line-height: 36px;
+    text-align: center;
+    color: $font-color-darker;
+    & h1 {
+        font-family: $font-main-black;
+        font-size: $font-size-extra-large;
+        margin: $form-spacing 0;
+        display: inline-block;
+    }
+    &Form {
+        padding-bottom: $form-spacing;
+        &Item {
+            @extend .form-item;
+            text-align: left;
+            margin-bottom: 21px;
+            & label {
+                display: block;
+                margin-bottom: 7px;
+            }
+            & input {
+                @include form-input;
+            }
+            & textarea {
+                @include form-textarea;
+            }
+        }
+        &Button {
+            @extend .form-item;
+            & button {
+                @include submit;
+            }
+        }
+    }
+}

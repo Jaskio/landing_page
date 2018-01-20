@@ -3,15 +3,18 @@
     border: none;
     background: none;
     padding: 0;
+    color: $font-color-white;
+    font-size: $font-size-base;
+    border-radius: 4px;
     cursor: url('../../assets/icons/hand_pointer.png'), all-scroll;
 }
 
-@mixin dots() {
-    @extend .button;
+@mixin dots {
     border-radius: 50%;
     background: $dots-bg;
     width: $slider-dots-size;
     height: $slider-dots-size;
+    cursor: url('../../assets/icons/hand_pointer.png'), all-scroll;
     &:before {
         font-size: 0px;
         width: $slider-dots-size;
@@ -19,13 +22,18 @@
     }
 }
 
-@mixin load-articles() {
+@mixin load-articles {
     @extend .button;
-    background: $load-btn;
-    font-size: $font-size-base;
-    font-family: $font-main-medium;
-    color: $font-color-white;
     height: 60px;
     width: 320px;
-    border-radius: 4px;
+    background: $load-btn;
+    font-family: $font-main-medium;
+}
+
+@mixin submit {
+    @extend .button;
+    height: 80px;
+    width: 100%;
+    background: $submit-btn;
+    font-family: $font-main-bold;
 }
