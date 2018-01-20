@@ -36,7 +36,11 @@ gulp.task('watch', function () {
 gulp.task('sass', function() {
     return gulp.src(paths.src.sass.files)
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(sass({
+                    outputStyle: 'compressed',
+                    includePaths: require('node-normalize-scss').includePaths
+                })
+        .on('error', sass.logError))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(paths.dist.css));
 });
@@ -47,7 +51,7 @@ gulp.task('sass', function() {
 gulp.task('prefix', function() {
     gulp.src('./dist/css/' + STYLE_NAME)
         .pipe(autoprefixer({
-            browsers: ['IE 7', 'iOS 7', 'iOS 6', 'iOS 4', 'last 3 iOS versions', '> 5%'],
+            browsers: ['last 2 versions'],
             cascade: false
         }))
         .pipe(gulp.dest(paths.dist.css));

@@ -167,6 +167,95 @@ $form-spacing: 63px;
 
 /*
 ######################
+    IE11+ Fixes
+######################
+*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .slider {
+        &Dots {
+            & li {
+                & button {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .grid {
+        text-align: center;
+        &Item {
+            display: inline-table;
+            width: 30%;
+            text-align: left;
+            &Link {
+                & a {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .loadButton {
+        & button {
+            cursor: pointer;
+        }
+    }
+    .contact {
+        &Form {
+            &Item {
+                & input {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                & textarea {
+                    overflow: hidden;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            &Button {
+                & button {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $site-desktop-width) {
+
+    }
+
+    @media only screen and (max-width: $site-tablet-width) {
+        .grid {
+            &Item {
+                width: 46%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $site-mobile-width) {
+        .slider {
+            &Item {
+                &Image {
+                    & img {
+                        width: auto;
+                    }
+                }
+            }
+        }
+        .grid {
+            &Item {
+                width: 96%;
+            }
+        }
+    }
+}
+
+
+/*
+######################
     Responsive
 ######################
 */
@@ -181,16 +270,8 @@ $form-spacing: 63px;
     .grid {
         grid-template-columns: repeat(2, 1fr);
         &Item {
-            &Image {
-                & img {
-
-                }
-            }
             &Title {
                 font-size: calc(#{$font-size-large} - 4px);
-            }
-            &Info {
-
             }
             &Link {
                 & a {
@@ -230,14 +311,6 @@ $form-spacing: 63px;
             }
             &Title {
                 font-size: calc(#{$font-size-large} - 8px);
-            }
-            &Info {
-
-            }
-            &Link {
-                & a {
-
-                }
             }
         }
     }

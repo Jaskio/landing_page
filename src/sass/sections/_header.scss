@@ -140,6 +140,43 @@ $mobile-header-height: 100%;
 
 /*
 ######################
+    IE11+ Fixes
+######################
+*/
+$header-top-padding: 35px;
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .header {
+        &Logo {
+            & a {
+                & img {
+                    top: $header-top-padding;
+                }
+            }
+        }
+        &Hamburger {
+            & img {
+                top: $header-top-padding;
+            }
+        }
+        &Navigation {
+            & ul {
+                & li {
+                    & a,
+                    & span {
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*
+######################
     Responsive
 ######################
 */

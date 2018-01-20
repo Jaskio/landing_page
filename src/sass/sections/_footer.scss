@@ -19,6 +19,29 @@
 
 /*
 ######################
+    IE11+ Fixes
+######################
+*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    
+    @media only screen and (max-width: $site-desktop-width) {
+
+    }
+
+    @media only screen and (max-width: $site-tablet-width) {
+        
+    }
+
+    @media only screen and (max-width: $site-mobile-width) {
+        .footer {
+            justify-content: space-around;
+        }
+    }
+}
+
+
+/*
+######################
     Responsive
 ######################
 */

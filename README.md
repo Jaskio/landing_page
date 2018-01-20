@@ -1,1 +1,7 @@
-# landing_page
+# Landing page
+
+## Tested with
+
+* Chrome <br>
+* Firefox <br>
+* IE11+
