@@ -96,7 +96,7 @@ $grid-line-height: 34px;
                 color: $link-article;
                 font-family: $font-main-bold;
                 line-height: $grid-line-height;
-                cursor: url('../../assets/icons/hand_pointer.png'), all-scroll;
+                cursor: url('../../assets/icons/hand_pointer.png'), pointer;
             }
         }
     }
@@ -171,53 +171,19 @@ $form-spacing: 63px;
 ######################
 */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    .slider {
-        &Dots {
-            & li {
-                & button {
-                    cursor: pointer;
-                }
-            }
-        }
-    }
     .grid {
         text-align: center;
         &Item {
             display: inline-table;
             width: 30%;
             text-align: left;
-            &Link {
-                & a {
-                    cursor: pointer;
-                }
-            }
-        }
-    }
-    .loadButton {
-        & button {
-            cursor: pointer;
         }
     }
     .contact {
         &Form {
             &Item {
-                & input {
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
                 & textarea {
                     overflow: hidden;
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
-            }
-            &Button {
-                & button {
-                    &:hover {
-                        cursor: pointer;
-                    }
                 }
             }
         }

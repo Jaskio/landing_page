@@ -24,7 +24,7 @@ $mobile-header-height: 100%;
         padding-left: $padding-header;
         & img {
             @include vertical-align('relative', '-50%');
-            cursor: url('../../assets/icons/hand_pointer.png'), all-scroll;
+            cursor: url('../../assets/icons/hand_pointer.png'), pointer;
         }
     }
     &Navigation {
@@ -42,7 +42,7 @@ $mobile-header-height: 100%;
                     padding: 0 $li-spacing;
                     &:hover {
                         background: $header-link-hover;
-                        cursor: url('../../assets/icons/hand_pointer.png'), all-scroll;
+                        cursor: url('../../assets/icons/hand_pointer.png'), pointer;
                     }
                 }
                 &:nth-child(2) {
@@ -157,18 +157,6 @@ $header-top-padding: 35px;
         &Hamburger {
             & img {
                 top: $header-top-padding;
-            }
-        }
-        &Navigation {
-            & ul {
-                & li {
-                    & a,
-                    & span {
-                        &:hover {
-                            cursor: pointer;
-                        }
-                    }
-                }
             }
         }
     }

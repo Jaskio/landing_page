@@ -8,7 +8,7 @@
     box-sizing: border-box;
     outline: none;
     &:hover {
-        cursor: url('../../assets/icons/hand_pointer.png'), all-scroll;
+        cursor: url('../../assets/icons/hand_pointer.png'), pointer;
     }
     &:focus {
         border-color: #00a1d1;

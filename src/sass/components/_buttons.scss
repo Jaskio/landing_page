@@ -6,7 +6,7 @@
     color: $font-color-white;
     font-size: $font-size-base;
     border-radius: 4px;
-    cursor: url('../../assets/icons/hand_pointer.png'), all-scroll;
+    cursor: url('../../assets/icons/hand_pointer.png'), pointer;
 }
 
 @mixin dots {
@@ -14,7 +14,7 @@
     background: $dots-bg;
     width: $slider-dots-size;
     height: $slider-dots-size;
-    cursor: url('../../assets/icons/hand_pointer.png'), all-scroll;
+    cursor: url('../../assets/icons/hand_pointer.png'), pointer;
     &:before {
         font-size: 0px;
         width: $slider-dots-size;
