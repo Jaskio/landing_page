@@ -155,6 +155,13 @@ $form-spacing: 63px;
                 @include form-textarea;
             }
         }
+        &Error {
+            color: $error-message;
+            display: none;
+            &--active {
+                display: block;
+            }
+        }
         &Button {
             @extend .form-item;
             & button {

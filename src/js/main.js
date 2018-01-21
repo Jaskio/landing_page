@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+    slickConfig();
+
     $('.headerHamburger, .headerMobileTrackClose').on('click', function(e) {
         var status = this.getAttribute('data-nav');
 
@@ -19,5 +22,25 @@ $(document).ready(function() {
                 body.removeClass('headerMobileOverflow--disable');
                 break;
         }
-    })
+    });
+
+    /**
+     * Slider configuration
+     */
+    function slickConfig() {
+        $('#slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            fade: true,
+            draggable: false,
+            dots: true,
+            dotsClass: 'slick-dots sliderDots',
+            arrows: false,
+            cssEase: 'linear',
+            adaptiveHeight: true
+        });
+    }
+
 });
