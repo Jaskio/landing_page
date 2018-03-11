@@ -1,7 +1,14 @@
 # Landing page
 
-## Tested with
+## Setup
 
-* Chrome <br>
-* Firefox <br>
+* In the root path type
+```
+npm install
+```
+
+### Compatible with
+
+* Chrome
+* Firefox
 * IE11+
